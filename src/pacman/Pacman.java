@@ -29,16 +29,5 @@ public class Pacman extends JFrame{
         setVisible(true);        
     }
 
-//    public static void main(String[] args) {
-//
-//        EventQueue.invokeLater(new Runnable() {
-// Nuevos comentarios
-    
-//            @Override
-//            public void run() {
-//                Pacman ex = new Pacman();
-//                ex.setVisible(true);
-//            }
-//        });
-//    }
+
 }

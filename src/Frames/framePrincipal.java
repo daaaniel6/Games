@@ -1,5 +1,8 @@
 package Frames;
 
+import java.awt.EventQueue;
+import pacman.Pacman;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -157,6 +160,14 @@ public class framePrincipal extends javax.swing.JFrame {
 
     private void buttonDanielActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDanielActionPerformed
         //djfajflaldjksfdfassssssssssssssssssssssssssss
+        EventQueue.invokeLater(new Runnable() {
+
+            @Override
+            public void run() {
+                Pacman ex = new Pacman();
+                ex.setVisible(true);
+            }
+        });
     }//GEN-LAST:event_buttonDanielActionPerformed
 
     /**

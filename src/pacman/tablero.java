@@ -23,19 +23,20 @@ import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+
 /**
  *
  * @author daniel
  */
-public class tablero extends JPanel implements ActionListener{
+public class tablero extends JPanel implements ActionListener {
 
-   @Override
+    @Override
     public void actionPerformed(ActionEvent e) {
 
         repaint();
     }
-    
-        private Dimension d;
+
+    private Dimension d;
     private final Font smallfont = new Font("Helvetica", Font.BOLD, 14);
 
     private Image ii;
@@ -70,7 +71,7 @@ public class tablero extends JPanel implements ActionListener{
     private int reqdx, reqdy, viewdx, viewdy;
 
     private final short leveldata[] = {
-      /*19*/  19, 26, 26, 26, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 22,
+        /*19*/19, 26, 26, 26, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 22,
         21, 0, 0, 0, 17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 20,
         21, 0, 0, 0, 17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 20,
         21, 0, 0, 0, 17, 16, 16, 24, 16, 16, 16, 16, 16, 16, 20,
@@ -78,7 +79,7 @@ public class tablero extends JPanel implements ActionListener{
         17, 16, 16, 16, 16, 16, 20, 0, 17, 16, 16, 16, 16, 24, 20,
         25, 16, 16, 16, 24, 24, 28, 0, 25, 24, 24, 16, 20, 0, 21,
         1, 17, 16, 20, 0, 0, 0, 0, 0, 0, 0, 17, 20, 0, 21,//<- 21
-        1, 17, 16, 16, 18, 18, 22, 0, 19, 18, 18, 16, 20, 0, 21,    //1 es para puntito
+        1, 17, 16, 16, 18, 18, 22, 0, 19, 18, 18, 16, 20, 0, 21, //1 es para puntito
         1, 17, 16, 16, 16, 16, 20, 0, 17, 16, 16, 16, 20, 0, 21,
         1, 17, 16, 16, 16, 16, 20, 0, 17, 16, 16, 16, 20, 0, 21,
         1, 17, 16, 16, 16, 16, 16, 18, 16, 16, 16, 16, 20, 0, 21,
@@ -167,7 +168,7 @@ public class tablero extends JPanel implements ActionListener{
         g2d.setColor(Color.white);
         g2d.drawRect(50, scrsize / 2 - 30, scrsize - 100, 50);
 
-        String s = "Presiona s para empezar.";
+        String s = "Presiona r para empezar.";
         Font small = new Font("Helvetica", Font.BOLD, 15);
         FontMetrics metr = this.getFontMetrics(small);
 
@@ -175,8 +176,8 @@ public class tablero extends JPanel implements ActionListener{
         g2d.setFont(small);
         g2d.drawString(s, (scrsize - metr.stringWidth(s)) / 2, scrsize / 2);
     }
-    
-     private void drawScore(Graphics2D g) {
+
+    private void drawScore(Graphics2D g) {
 
         int i;
         String s;
@@ -374,7 +375,7 @@ public class tablero extends JPanel implements ActionListener{
         switch (pacmananimpos) {
             case 1:
                 g2d.drawImage(pacman2up, pacmanx + 1, pacmany + 1, this);
-        
+
                 break;
             case 2:
                 g2d.drawImage(pacman3up, pacmanx + 1, pacmany + 1, this);
@@ -535,20 +536,20 @@ public class tablero extends JPanel implements ActionListener{
 
     private void loadImages() {
 
-        ghost = new ImageIcon(getClass().getResource("../images/ghost.gif")).getImage();
-        pacman1 = new ImageIcon(getClass().getResource("../images/pacman.gif")).getImage();
-        pacman2up = new ImageIcon(getClass().getResource("../images/up1.gif")).getImage();
-        pacman3up = new ImageIcon(getClass().getResource("../images/up2.gif")).getImage();
-        pacman4up = new ImageIcon(getClass().getResource("../images/up3.gif")).getImage();
-        pacman2down = new ImageIcon(getClass().getResource("../images/down1.gif")).getImage();
-        pacman3down = new ImageIcon(getClass().getResource("../images/down2.gif")).getImage();
-        pacman4down = new ImageIcon(getClass().getResource("../images/down3.gif")).getImage();
-        pacman2left = new ImageIcon(getClass().getResource("../images/left1.gif")).getImage();
-        pacman3left = new ImageIcon(getClass().getResource("../images/left2.gif")).getImage();
-        pacman4left = new ImageIcon(getClass().getResource("../images/left3.gif")).getImage();
-        pacman2right = new ImageIcon(getClass().getResource("../images/right1.gif")).getImage();
-        pacman3right = new ImageIcon(getClass().getResource("../images/right2.gif")).getImage();
-        pacman4right = new ImageIcon(getClass().getResource("../images/right3.gif")).getImage();
+        ghost = new ImageIcon(getClass().getResource("../Images/monstruo2.png")).getImage();
+        pacman1 = new ImageIcon(getClass().getResource("../Images/pacman.gif")).getImage();
+        pacman2up = new ImageIcon(getClass().getResource("../Images/up1.gif")).getImage();
+        pacman3up = new ImageIcon(getClass().getResource("../Images/up2.gif")).getImage();
+        pacman4up = new ImageIcon(getClass().getResource("../Images/up3.gif")).getImage();
+        pacman2down = new ImageIcon(getClass().getResource("../Images/down1.gif")).getImage();
+        pacman3down = new ImageIcon(getClass().getResource("../Images/down2.gif")).getImage();
+        pacman4down = new ImageIcon(getClass().getResource("../Images/down3.gif")).getImage();
+        pacman2left = new ImageIcon(getClass().getResource("../Images/left1.gif")).getImage();
+        pacman3left = new ImageIcon(getClass().getResource("../Images/left2.gif")).getImage();
+        pacman4left = new ImageIcon(getClass().getResource("../Images/left3.gif")).getImage();
+        pacman2right = new ImageIcon(getClass().getResource("../Images/right1.gif")).getImage();
+        pacman3right = new ImageIcon(getClass().getResource("../Images/right2.gif")).getImage();
+        pacman4right = new ImageIcon(getClass().getResource("../Images/right3.gif")).getImage();
 
     }
 
@@ -630,8 +631,5 @@ public class tablero extends JPanel implements ActionListener{
             }
         }
     }
-    
-    
-    
-    
+
 }

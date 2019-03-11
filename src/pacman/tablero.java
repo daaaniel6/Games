@@ -168,6 +168,7 @@ public class tablero extends JPanel implements ActionListener {
         g2d.setColor(Color.white);
         g2d.drawRect(50, scrsize / 2 - 30, scrsize - 100, 50);
 
+            //Bug 
         String s = "Presiona r para empezar.";
         Font small = new Font("Helvetica", Font.BOLD, 15);
         FontMetrics metr = this.getFontMetrics(small);
